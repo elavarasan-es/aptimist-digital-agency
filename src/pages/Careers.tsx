@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Footer from './Footer';
 
-const jobs = {
+const jobs : { [key: string]: string } ={
   'Web Designer':
     'Looking for creative web designer skilled in Figma, HTML, CSS. Looking for creative web designer skilled in Figma, HTML, CSS.',
   Developer: 'Seeking React/Node developer with 3+ years experience.',

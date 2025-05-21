@@ -73,8 +73,12 @@ const SummaryContentIcon = styled('div')({
   justifyContent: 'center',
   color: 'white',
 });
+
   return (
-    <Accordion expanded={isExpanded} onChange={onChange(panelKey)}>
+   <Accordion
+  expanded={isExpanded}
+  onChange={(expanded) => onChange(expanded ? panelKey : '')}
+>
       <CustomAccordionSummary
         expandIcon={
           <ExpandIconWrapper>
