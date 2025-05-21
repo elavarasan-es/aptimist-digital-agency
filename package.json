@@ -4,13 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "postinstall": "rimraf node_modules/@rollup/rollup-* || exit 0"
+},
   "overrides": {
-  "@rollup/rollup": "3.29.0"
+  "rollup": "3.29.0"
 },
   "dependencies": {
     "@emotion/react": "^11.14.0",
