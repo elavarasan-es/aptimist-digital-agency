@@ -78,7 +78,7 @@ const ParticlesBackground = () => {
             <ImageBanner />
           </div>
         </div>
-        <div className="w-full max-w-md mb-10">
+        <div className="w-full max-w-md m-4">
           <InfoForm/>
           {/* <SimpleForm /> */}
         </div>

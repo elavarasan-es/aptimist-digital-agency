@@ -16,6 +16,7 @@ const WebsiteCard: React.FC<WebsiteCardProps> = ({ url, title, img, siteLink }) 
   return (
     <motion.div
       onHoverStart={() => setIsHovered(true)}
+      onTap={() => setIsHovered(!isHovered)}
       onHoverEnd={() => setIsHovered(false)}
       style={{
         width: '350px',
