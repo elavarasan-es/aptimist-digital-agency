@@ -1,5 +1,3 @@
-import DeviceInfo from 'react-native-device-info';
-import { useWindowDimensions } from 'react-native';
 
 interface DeviceInfoType {
   isTablet: boolean;
@@ -8,20 +6,22 @@ interface DeviceInfoType {
 }
 
 const getDeviceInfo = (): DeviceInfoType => {
-  const isTablet = DeviceInfo.isTablet();
-  const deviceType = DeviceInfo.getDeviceType();
-  const isDesktop = deviceType === 'Desktop';
+  const width = window.innerWidth;
+
+  const isTablet = width >= 768 && width < 1024;
+  const isDesktop = width >= 1024;
+
+  const deviceType = isTablet
+    ? 'Tablet'
+    : isDesktop
+    ? 'Desktop'
+    : 'Mobile Phone';
 
   return {
     isTablet,
     isDesktop,
-    deviceType: isTablet ? 'Tablet' : isDesktop ? 'Desktop' : 'Mobile Phone',
+    deviceType,
   };
 };
-
-export function useIsLandscape(): boolean {
-  const { height, width } = useWindowDimensions();
-  return width > height;
-}
 
 export default getDeviceInfo;
