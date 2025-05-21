@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 function ImageBanner() {
   const items = [

@@ -1,6 +1,5 @@
 // src/components/Navbar.tsx
 
-import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import MobileNav from './MobileNav';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import showcaseBG from '../assets/images/showcase_bg1.jpg';
 import WebsiteCard from '../components/ServiceCard';
 import Footer from './Footer';
