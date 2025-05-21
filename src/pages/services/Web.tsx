@@ -1,16 +1,14 @@
 import { motion } from 'framer-motion';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CustomAccordion from '../../components/Accordian';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 function Web() {
   const [expanded, setExpanded] = useState<string | false>(false);
 
-  const handleChange =
-    (panel: string) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
-      setExpanded(isExpanded ? panel : false);
-    };
-
+ const handleChange = (panel: string) => {
+  setExpanded(prev => (prev === panel ? false : panel));
+};
   return (
     <div>
       <div id="Agency" className="pt-10 bg-white ">

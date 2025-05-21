@@ -39,7 +39,7 @@ const InfoForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md p-4 rounded-md shadow-md bg-white space-y-4 "
+      className="max-w-md p-4 rounded-md shadow-md bg-white space-y-4 m-4 "
     >
       <div className="flex items-center justify-between">
         <div>

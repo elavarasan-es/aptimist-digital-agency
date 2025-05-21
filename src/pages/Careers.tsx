@@ -293,7 +293,7 @@ const Careers: React.FC = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Apply for {selectedJob}
                 </h3>
-                <div>
+                <div className='m-4'>
                   <input
                     type="text"
                     placeholder="Your Name"
